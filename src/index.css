@@ -122,3 +122,7 @@
 body{
   @apply dark:text-white dark:bg-slate-950;
 }
+
+html {
+  scroll-behavior: smooth;
+}
