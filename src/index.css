@@ -120,7 +120,7 @@
 }
 
 body{
-  @apply dark:text-white dark:bg-slate-950;
+  @apply dark:text-neutral-200 dark:bg-slate-950;
 }
 
 html {
