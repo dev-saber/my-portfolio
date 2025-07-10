@@ -48,10 +48,24 @@ const About = () => {
         <p className="mb-4">
           Lately, I’ve also been diving deep into the world of data. My passion
           started with football metrics — things like{" "}
-          <span className="font-mono text-green-400">xG</span>,{" "}
-          <span className="font-mono text-green-400">xGC</span>, and passing
-          networks — and it quickly turned into a broader fascination with how
-          data tells stories, reveals patterns, and drives smarter decisions.
+          <span className="relative group font-mono text-green-400 cursor-pointer">
+            xG
+            <span className="absolute left-1/2 top-full z-10 mt-2 w-68 -translate-x-1/2 rounded-lg bg-white dark:bg-slate-900 text-neutral-700 dark:text-neutral-200 text-xs px-4 py-2 shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300">
+              Expected Goals (xG): Measures shot quality based on factors like
+              assist type, angle, and distance.
+            </span>
+          </span>
+          ,{" "}
+          <span className="relative group font-mono text-green-400 cursor-pointer">
+            xGC
+            <span className="absolute left-1/2 top-full z-10 mt-2 w-68 -translate-x-1/2 rounded-lg bg-white dark:bg-slate-900 text-neutral-700 dark:text-neutral-200 text-xs px-4 py-2 shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300">
+              Expected Goals Conceded (xGC): Estimates goals likely conceded
+              from the quality of shots faced.
+            </span>
+          </span>
+          , and passing networks — and it quickly turned into a broader
+          fascination with how data tells stories, reveals patterns, and drives
+          smarter decisions.
         </p>
         <p className="mb-4">
           I’m always eager to connect and collaborate with fellow developers,
