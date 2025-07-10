@@ -10,27 +10,34 @@ import {
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
 import navigationLinks from "@/assets/navigation";
+import { ModeToggle } from "../ui/mode-toggle";
 
-export default function NavbarDemo() {
+export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="w-full py-2">
+    <div className="w-full p-2 flex items-center">
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody>
           <NavbarLogo />
           <NavItems items={navigationLinks} />
+          <ModeToggle />
         </NavBody>
 
         {/* Mobile Navigation */}
         <MobileNav>
           <MobileNavHeader>
-            <NavbarLogo />
-            <MobileNavToggle
-              isOpen={isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            />
+            <div className="flex w-full items-center justify-between">
+              <NavbarLogo />
+              <div className="flex items-center gap-2">
+                <ModeToggle />
+                <MobileNavToggle
+                  isOpen={isMobileMenuOpen}
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                />
+              </div>
+            </div>
           </MobileNavHeader>
 
           <MobileNavMenu isOpen={isMobileMenuOpen}>
@@ -41,7 +48,7 @@ export default function NavbarDemo() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="relative text-neutral-600 dark:text-neutral-300"
               >
-                <span className="block">{item.label}</span>
+                <span>{item.label}</span>
               </a>
             ))}
           </MobileNavMenu>

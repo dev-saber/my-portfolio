@@ -1,13 +1,11 @@
 import Navigation from "./components/atoms/Navigation";
-import { Button } from "./components/ui/button";
+import { ThemeProvider } from "@/components/ui/theme-provider";
 
 function App() {
   return (
-    <>
-    <Navigation />
-      {/* <h1 className="text-3xl font-bold underline">Hello world!</h1>;
-      <Button>Click me</Button> */}
-    </>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <Navigation />
+    </ThemeProvider>
   );
 }
 
