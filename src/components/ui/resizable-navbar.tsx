@@ -124,12 +124,17 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
       )}
     >
       {items.map((item, idx) => (
-        <a
-          onMouseEnter={() => setHovered(idx)}
-          onClick={onItemClick}
-          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
+        <button
           key={`link-${idx}`}
-          href={item.path}
+          onMouseEnter={() => setHovered(idx)}
+          onClick={() => {
+            const el = document.getElementById(item.path);
+            if (el) {
+              el.scrollIntoView({ behavior: "smooth" });
+            }
+            if (onItemClick) onItemClick();
+          }}
+          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300 bg-transparent border-none cursor-pointer"
         >
           <span
             className="hover:font-semibold hover:text-black transition-all duration-200 ease-in-out inline-block dark:hover:text-white"
@@ -140,7 +145,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
           >
             {item.label}
           </span>
-        </a>
+        </button>
       ))}
     </motion.div>
   );

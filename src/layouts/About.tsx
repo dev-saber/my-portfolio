@@ -12,7 +12,16 @@ const About = () => {
           Hey there! I'm{" "}
           <span className="font-semibold">Sifeddine Eddarai</span> — but you can
           call me{" "}
-          <span className="text-green-600 dark:text-green-400 font-bold text-lg md:text-xl">
+          <span
+            className="text-green-600 dark:text-green-400 font-bold text-lg md:text-xl cursor-pointer"
+            onClick={() =>
+              window.open(
+                "https://github.com/dev-saber",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
+          >
             Dev-Saber
           </span>
           . I'm a curious mind, a builder at heart, and a software engineer who
@@ -27,10 +36,14 @@ const About = () => {
           clean, efficient code that’s built to last.
         </p>
         <p className="mb-4">
-          Outside of coding, I’m someone who loves reading books, a football
-          tactics enthusiast (yes, the kind who watches build-up patterns and
-          pressing schemas for fun), and an FPS gamer in my spare time — even
-          though I’m far from pro status, I still enjoy the challenge!
+          Outside of{" "}
+          <span className="font-mono text-green-600 dark:text-green-400">
+            {"<"}coding{"/>"}
+          </span>
+          , I’m someone who loves reading books, a football tactics enthusiast
+          (yes, the kind who watches build-up patterns and pressing schemas for
+          fun), and an FPS gamer in my spare time — even though I’m far from pro
+          status, I still enjoy the challenge!
         </p>
         <p className="mb-4">
           Lately, I’ve also been diving deep into the world of data. My passion

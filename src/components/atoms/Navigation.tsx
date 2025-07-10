@@ -42,14 +42,19 @@ export default function Navigation() {
 
           <MobileNavMenu isOpen={isMobileMenuOpen}>
             {navigationLinks.map((item, idx) => (
-              <a
+              <span
                 key={`mobile-link-${idx}`}
-                href={item.path}
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => {
+                  const el = document.getElementById(item.path);
+                  if (el) {
+                    el.scrollIntoView({ behavior: "smooth" });
+                  }
+                  setIsMobileMenuOpen(false);
+                }}
                 className="relative text-neutral-600 dark:text-neutral-300"
               >
-                <span>{item.label}</span>
-              </a>
+                {item.label}
+              </span>
             ))}
           </MobileNavMenu>
         </MobileNav>
