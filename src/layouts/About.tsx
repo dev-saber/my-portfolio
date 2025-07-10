@@ -1,12 +1,12 @@
+import Title from "@/components/atoms/Title";
+
 const About = () => {
   return (
     <section
       id="about"
       className="px-4 py-12 sm:px-8 md:px-16 lg:px-32 lg:w-4/5 mx-auto text-justify"
     >
-      <h1 className="text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-white mb-6 text-center">
-        About Me
-      </h1>
+      <Title>About Me</Title>
       <div className="p-6 sm:p-8 text-base sm:text-lg leading-relaxed">
         <p className="mb-4">
           Hey there! I'm{" "}
@@ -41,8 +41,12 @@ const About = () => {
             {"<"}coding{"/>"}
           </span>
           , I’m someone who loves reading books, a football tactics enthusiast
-          (yes, the kind who watches build-up patterns and pressing schemas for
-          fun), and an FPS gamer in my spare time — even though I’m far from pro
+          <span className="italic">
+            {" "}
+            (yes, the kind who watches build-up patterns and pressing schemas
+            for fun)
+          </span>
+          , and an FPS gamer in my spare time — even though I’m far from pro
           status, I still enjoy the challenge!
         </p>
         <p className="mb-4">
