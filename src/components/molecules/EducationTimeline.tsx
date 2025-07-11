@@ -1,17 +1,9 @@
 import React from "react";
-import { GraduationCap } from "lucide-react";
 import educations from "@/assets/education";
 
 const EducationTimeline: React.FC = () => {
   return (
-    <div className="w-full max-w-2xl mx-auto p-0 sm:p-6">
-      <div className="flex items-center gap-3 mb-8">
-        <GraduationCap className="w-7 h-7 text-green-600 dark:text-green-400" />
-        <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100">
-          Education
-        </h2>
-      </div>
-
+    <div className="w-full max-w-2xl p-0 sm:p-6">
       <div className="relative">
         <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-slate-700"></div>
 
