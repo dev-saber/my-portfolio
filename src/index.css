@@ -114,12 +114,13 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
-body{
+body {
   @apply dark:text-neutral-200 dark:bg-slate-950;
 }
 
@@ -127,6 +128,41 @@ html {
   scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
   transition: background-color 0.5s, color 0.5s;
+}
+
+.project {
+  --x-px: calc(var(--x) * 1px);
+  --y-px: calc(var(--y) * 1px);
+}
+
+.project-glow {
+  background: radial-gradient(
+    600px circle at var(--x-px) var(--y-px),
+    rgba(0, 0, 0, 0.1),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.dark .project-glow {
+  background: radial-gradient(
+    600px circle at var(--x-px) var(--y-px),
+    rgba(255, 255, 255, 0.2),
+    transparent 40%
+  );
+}
+
+.project:hover .project-glow {
+  opacity: 1;
+}
+
+/* Responsive aspect ratio adjustments */
+@media (min-width: 768px) {
+  .project {
+    aspect-ratio: 16/9;
+  }
 }
