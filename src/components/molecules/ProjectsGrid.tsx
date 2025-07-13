@@ -18,13 +18,12 @@ const ProjectsGrid = () => {
       (card as HTMLElement).style.setProperty("--y", `${y}`);
     });
   };
-  console.log(projects)
 
   return (
-    <div className=" p-4">
+    <div className="w-full">
       <div
         ref={gridRef}
-        className="grid grid-cols-1 md:grid-cols-2 gap-8 -ml-48"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-4 xl:gap-6"
         onPointerMove={handlePointerMove}
       >
         {projects.map((project, index) => (

@@ -5,13 +5,17 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="px-4 py-12 sm:px-8 md:px-16 lg:px-32 lg:w-4/5 mx-auto"
+      className="px-4 py-12 sm:px-8 md:px-16 lg:px-32 lg:w-full mx-auto"
     >
       <Title>Projects</Title>
-      <div className="flex w-full gap-4 justify-between">
-        <ProjectsGrid />
-        {/* skills here + their filter */}
-        <span>skills</span>
+      <div className="flex flex-col lg:flex-row w-full gap-8 justify-between">
+        <div className="w-full lg:w-2/3">
+          <ProjectsGrid />
+        </div>
+        <div className="w-full lg:w-1/3">
+          {/* skills here + their filter */}
+          skills
+        </div>
       </div>
     </section>
   );

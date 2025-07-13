@@ -54,7 +54,7 @@ const projects: {
   {
     title: "EMSI Connect",
     description:
-      "A professional networking and recruitment platform dedicated for EMSI alumni. Enables CV creation, job applications, real-time messaging, and social interaction—all built with Laravel, React, and WebSockets.",
+      "A professional networking and recruitment platform dedicated for EMSI alumni. Enables CV creation, job applications, real-time messaging, and social interaction — all built with Laravel, React, and WebSockets.",
     tools: [
       "React",
       "Tailwind",
