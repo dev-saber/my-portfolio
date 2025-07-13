@@ -12,7 +12,7 @@ const ProjectCard = ({
   github?: string;
 }) => {
   return (
-    <div className="project relative rounded-xl bg-[rgba(255,255,255,0.125)] w-full overflow-hidden">
+    <div className="project relative rounded-xl bg-[rgba(255,255,255,0.125)] w-full overflow-visible">
       <div className="project-glow absolute inset-0 rounded-xl z-0 pointer-events-none" />
       <div className="project-content relative m-[2px] rounded-xl bg-white/80 dark:bg-slate-950 flex flex-col gap-4 p-6 z-10 min-h-[calc(100%-4px)]">
         <div className="flex-shrink-0">
@@ -25,8 +25,11 @@ const ProjectCard = ({
                 <Github className="w-5 h-5 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-200 transition-colors" />
               </a>
             ) : (
-              <span title="Private repository" className="cursor-not-allowed">
+              <span className="relative group cursor-not-allowed">
                 <Github className="w-5 h-5 text-gray-400 dark:text-gray-600 opacity-50" />
+                <span className="font-mono absolute left-1/2 top-full z-50 w-40 -translate-x-1/2 rounded-lg bg-white dark:bg-slate-900 text-neutral-700 dark:text-neutral-200 text-xs px-4 py-2 shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300">
+                  Private repository
+                </span>
               </span>
             )}
           </div>
@@ -38,7 +41,7 @@ const ProjectCard = ({
             {tools.map((tool, index) => (
               <span
                 key={index}
-                className="px-3 py-1 text-xs font-medium rounded-full bg-green-600/20 dark:bg-green-800/30 text-green-800 dark:text-green-200 border border-green-600/30 dark:border-green-800/50"
+                className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-green-50 dark:bg-green-900 text-green-700 dark:text-green-300"
               >
                 {tool}
               </span>

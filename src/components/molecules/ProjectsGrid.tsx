@@ -23,7 +23,7 @@ const ProjectsGrid = () => {
     <div className="w-full">
       <div
         ref={gridRef}
-        className="grid grid-cols-1 lg:grid-cols-2 gap-4 xl:gap-6"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-12"
         onPointerMove={handlePointerMove}
       >
         {projects.map((project, index) => (
