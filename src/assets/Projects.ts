@@ -7,15 +7,15 @@ const skills: {
     skills: ["Python", "Javascript/TypeScript", "Java", "PHP", "C++"],
   },
   {
-    category: "Frontend",
+    category: "Frontend Technologies",
     skills: ["React", "Tailwind"],
   },
   {
-    category: "Backend",
-    skills: ["Laravel", "Django", "Django Rest Framework", "Flask", "ASP.NET"],
+    category: "Backend Technologies",
+    skills: ["Laravel", "Django", "Django Rest Framework", "Flask", "ASP .NET"],
   },
   {
-    category: "Database",
+    category: "Database Management",
     skills: ["MySQL", "Oracle", "MS SQL Server", "MongoDB"],
   },
   {
@@ -90,13 +90,13 @@ const projects: {
   {
     title: "Sakan",
     description:
-      "A real estate rental platform built with React.js and ASP.NET, featuring role-based authentication, user/admin access control, and efficient property and post management.",
+      "A real estate rental platform built with React.js and ASP .NET, featuring role-based authentication, user/admin access control, and efficient property and post management.",
     tools: [
       "React",
       "Tailwind",
       "Redux Toolkit",
       "Vite",
-      "ASP.NET",
+      "ASP .NET",
       "JSON Web Token",
       "MS SQL Server",
     ],
@@ -135,7 +135,7 @@ const projects: {
     title: "Moroccan Blood Donating Centers API",
     description:
       "A Flask-based API that offers information about blood donating centers in Morocco.",
-    tools: ["Python", "Flask", "MongoDB", "PyMongo"],
+    tools: ["Python", "Flask", "MongoDB"],
     github: "https://github.com/dev-saber/moroccan-blood-donating-centers-api",
   },
   {
