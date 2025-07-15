@@ -60,6 +60,7 @@ const projects: {
       "Tailwind",
       "Redux Toolkit",
       "Vite",
+      "PHP",
       "Laravel",
       "Sanctum",
       "MySQL",
@@ -76,8 +77,6 @@ const projects: {
       "Java Swing",
       "Jackson Library",
       "IntelliJ IDEA",
-      "Git",
-      "GitHub",
     ],
     github: "https://github.com/dev-saber/Dental-Clinic-Management-System",
   },
@@ -106,7 +105,7 @@ const projects: {
     title: "Deliverix",
     description:
       "A Django REST API for managing mail and package logistics with JWT auth, role-based permissions, and endpoints for offices, users, and delivery requests.",
-    tools: ["Django", "Django Rest Framework", "MySQL", "JSON Web Token"],
+    tools: ["Python", "Django", "Django Rest Framework", "MySQL", "JSON Web Token"],
     github: "https://github.com/dev-saber/Deliverix",
   },
   {
@@ -118,6 +117,7 @@ const projects: {
       "Tailwind",
       "Redux Toolkit",
       "Vite",
+      "Python",
       "Django",
       "Django Rest Framework",
       "MySQL",

@@ -14,7 +14,7 @@ const AnimatedCursor = () => {
 
       const rect = firstSkillTag.getBoundingClientRect();
       const targetX = rect.left + rect.width / 2;
-      const targetY = rect.top + rect.height / 2;
+      const targetY = rect.top + rect.height +10 / 2;
 
       // Start cursor from the right side of the screen
       const startX = window.innerWidth + 50;

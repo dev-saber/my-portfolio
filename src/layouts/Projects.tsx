@@ -4,10 +4,10 @@ import Skills from "@/components/molecules/Skills";
 import { useState } from "react";
 
 const Projects = () => {
-  const [filter, setFilter] = useState<string[]>([]);
+  const [filters, setFilters] = useState<string[]>([]);
 
   const toggleFilter = (technology: string) => {
-    setFilter((prev) =>
+    setFilters((prev) =>
       prev.includes(technology)
         ? prev.filter((item) => item !== technology)
         : [...prev, technology]
@@ -15,7 +15,7 @@ const Projects = () => {
   };
 
   const isFiltered = (technology: string) => {
-    return filter.includes(technology);
+    return filters.includes(technology);
   };
 
   return (
@@ -26,13 +26,13 @@ const Projects = () => {
       <Title>Projects</Title>
       <div className="flex flex-col lg:flex-row w-full gap-8 justify-between items-start">
         <div className="w-full lg:w-2/3">
-          <ProjectsGrid />
+          <ProjectsGrid filters={filters} />
         </div>
         <div className="w-full lg:w-1/3">
           <Skills
             isFiltered={isFiltered}
             filter={toggleFilter}
-            filtersLength={filter.length}
+            filtersLength={filters.length}
           />
         </div>
       </div>
