@@ -24,7 +24,7 @@ export default function Home() {
           Hi I'm Sifeddine Eddarai.
           <br />
           I'm a Computer Science Engineering Student, passionate about{" "}
-          <TextHighlight word=" Web development" /> and the
+          <TextHighlight word=" Web Development" /> and the
           <TextHighlight word="World of Data" /> .
         </motion.h1>
       </HeroHighlight>

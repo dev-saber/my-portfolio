@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import ProjectCard from "../atoms/ProjectCard";
-import { projects } from "@/assets/Projects";
+import { projects, skills } from "@/assets/Projects";
 
 const ProjectsGrid = ({ filters }: { filters: string[] }) => {
   const gridRef = useRef<HTMLDivElement>(null);
@@ -19,6 +19,12 @@ const ProjectsGrid = ({ filters }: { filters: string[] }) => {
     });
   };
 
+  const excludedFilters =
+    skills.find((skill) => skill.category === "Miscellaneous")?.skills || [];
+  const enhancedFilters = filters
+    .map((filter) => (filter === "Javascript/TypeScript" ? "React" : filter))
+    .filter((filter) => !excludedFilters.includes(filter));
+
   return (
     <div className="w-full">
       <div
@@ -27,9 +33,10 @@ const ProjectsGrid = ({ filters }: { filters: string[] }) => {
         onPointerMove={handlePointerMove}
       >
         {projects
-          .filter(project =>
-            filters.length === 0 ||
-            filters.every(filter => project.tools.includes(filter))
+          .filter(
+            (project) =>
+              enhancedFilters.length === 0 ||
+              enhancedFilters.every((filter) => project.tools.includes(filter))
           )
           .map((project, index) => (
             <ProjectCard
