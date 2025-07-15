@@ -5,6 +5,7 @@ import About from "./layouts/About";
 import Resume from "./layouts/Resume";
 import Projects from "./layouts/Projects";
 import Contact from "./layouts/Contact";
+import Footer from "./components/atoms/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Resume />
       <Projects />
       <Contact />
+      <Footer />
     </ThemeProvider>
   );
 }
