@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
-import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
+import { HeroHighlight } from "@/components/ui/hero-highlight";
+import TextHighlight from "@/components/atoms/TextHighlight";
 
 export default function Home() {
   return (
@@ -23,14 +24,8 @@ export default function Home() {
           Hi I'm Sifeddine Eddarai.
           <br />
           I'm a Computer Science Engineering Student, passionate about{" "}
-          <Highlight className="font-bold whitespace-nowrap">
-            Web development
-          </Highlight>{" "}
-          and the{" "}
-          <Highlight className="font-bold whitespace-nowrap">
-            World of Data
-          </Highlight>
-          .
+          <TextHighlight word=" Web development" /> and the
+          <TextHighlight word="World of Data" /> .
         </motion.h1>
       </HeroHighlight>
     </section>
