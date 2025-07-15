@@ -14,7 +14,7 @@ const AnimatedCursor = () => {
 
       const rect = firstSkillTag.getBoundingClientRect();
       const targetX = rect.left + rect.width / 2;
-      const targetY = rect.top + rect.height +10 / 2;
+      const targetY = rect.top + rect.height + 10 / 2;
 
       // Start cursor from the right side of the screen
       const startX = window.innerWidth + 50;
@@ -67,7 +67,9 @@ const AnimatedCursor = () => {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
       }
-      animationTimeoutsRef.current.forEach((timeoutId) => clearTimeout(timeoutId));
+      animationTimeoutsRef.current.forEach((timeoutId) =>
+        clearTimeout(timeoutId)
+      );
       animationTimeoutsRef.current = [];
     };
   }, []);
@@ -111,7 +113,7 @@ const AnimatedCursor = () => {
           className="hidden md:block font-mono bg-white dark:bg-slate-900 text-neutral-700 dark:text-neutral-200 text-xs px-4 py-2 shadow-lg absolute rounded-lg font-medium"
           style={{
             left: cursorPosition.x + 20,
-            top: cursorPosition.y - 50,
+            top: cursorPosition.y - 10,
             opacity: 1,
             animation: "fade-in 0.3s ease-in-out",
           }}
