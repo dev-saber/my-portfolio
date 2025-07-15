@@ -54,7 +54,7 @@ const AnimatedCursor = () => {
 
     const scheduleAnimation = () => {
       startAnimation();
-      timeoutRef.current = setTimeout(scheduleAnimation, 10000);
+      timeoutRef.current = setTimeout(scheduleAnimation, 20000);
     };
 
     // Start the first animation after a short delay

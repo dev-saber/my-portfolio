@@ -1,8 +1,23 @@
 import Title from "@/components/atoms/Title";
 import ProjectsGrid from "@/components/molecules/ProjectsGrid";
 import Skills from "@/components/molecules/Skills";
+import { useState } from "react";
 
 const Projects = () => {
+  const [filter, setFilter] = useState<string[]>([]);
+
+  const toggleFilter = (technology: string) => {
+    setFilter((prev) =>
+      prev.includes(technology)
+        ? prev.filter((item) => item !== technology)
+        : [...prev, technology]
+    );
+  };
+
+  const isFiltered = (technology: string) => {
+    return filter.includes(technology);
+  };
+
   return (
     <section
       id="projects"
@@ -14,7 +29,11 @@ const Projects = () => {
           <ProjectsGrid />
         </div>
         <div className="w-full lg:w-1/3">
-          <Skills />
+          <Skills
+            isFiltered={isFiltered}
+            filter={toggleFilter}
+            filtersLength={filter.length}
+          />
         </div>
       </div>
     </section>
