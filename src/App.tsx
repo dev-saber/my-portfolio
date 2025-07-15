@@ -5,7 +5,7 @@ import About from "./layouts/About";
 import Resume from "./layouts/Resume";
 import Projects from "./layouts/Projects";
 import Contact from "./layouts/Contact";
-import Footer from "./components/atoms/Footer";
+import Footer from "./layouts/Footer";
 
 function App() {
   return (
