@@ -5,6 +5,7 @@ const AnimatedCursor = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [showHint, setShowHint] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | number | null>(null);
+  const animationTimeoutsRef = useRef<Array<NodeJS.Timeout | number>>([]);
 
   useEffect(() => {
     const startAnimation = () => {
@@ -24,23 +25,31 @@ const AnimatedCursor = () => {
       setIsVisible(true);
 
       // Animate to target position
-      setTimeout(() => {
-        setCursorPosition({ x: targetX, y: targetY });
-      }, 100);
+      animationTimeoutsRef.current.push(
+        setTimeout(() => {
+          setCursorPosition({ x: targetX, y: targetY });
+        }, 100)
+      );
 
       // Show hint after cursor reaches target (after animation completes)
-      setTimeout(() => {
-        setShowHint(true);
-      }, 800); // Wait for cursor animation to complete
+      animationTimeoutsRef.current.push(
+        setTimeout(() => {
+          setShowHint(true);
+        }, 800) // Wait for cursor animation to complete
+      );
 
       // Hide hint first, then hide cursor
-      setTimeout(() => {
-        setShowHint(false);
-      }, 3200); // Show hint for 2 seconds
+      animationTimeoutsRef.current.push(
+        setTimeout(() => {
+          setShowHint(false);
+        }, 3200) // Show hint for 2 seconds
+      );
 
-      setTimeout(() => {
-        setIsVisible(false);
-      }, 3500); // Hide cursor 300ms after hint disappears
+      animationTimeoutsRef.current.push(
+        setTimeout(() => {
+          setIsVisible(false);
+        }, 3500) // Hide cursor 300ms after hint disappears
+      );
     };
 
     const scheduleAnimation = () => {
@@ -58,6 +67,8 @@ const AnimatedCursor = () => {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
       }
+      animationTimeoutsRef.current.forEach((timeoutId) => clearTimeout(timeoutId));
+      animationTimeoutsRef.current = [];
     };
   }, []);
 
