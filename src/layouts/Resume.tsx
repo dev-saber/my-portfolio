@@ -10,11 +10,11 @@ const Resume = () => {
       className="px-4 py-12 sm:px-8 md:px-16 lg:px-32 lg:w-4/5 mx-auto"
     >
       <Title>Resume</Title>
-      <div className="p-4 sm:p-10 flex flex-col gap-20 relative overflow-x-visible">
+      <div className="p-4 sm:p-10 flex flex-col gap-12 sm:gap-20 relative overflow-x-visible">
         <div className="flex flex-col">
-          <div className="flex items-center gap-3 mb-8">
-            <GraduationCap className="w-7 h-7 text-green-600 dark:text-green-400" />
-            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100">
+          <div className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+            <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-green-600 dark:text-green-400" />
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-neutral-800 dark:text-neutral-100">
               Education
             </h2>
           </div>
@@ -26,9 +26,9 @@ const Resume = () => {
         </div>
 
         <div className="flex flex-col">
-          <div className="flex items-center gap-3 mb-8">
-            <Briefcase className="w-7 h-7 text-green-600 dark:text-green-400" />
-            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-100">
+          <div className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+            <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-green-600 dark:text-green-400" />
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-neutral-800 dark:text-neutral-100">
               Experience
             </h2>
           </div>

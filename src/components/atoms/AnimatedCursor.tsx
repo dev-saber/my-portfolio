@@ -4,10 +4,32 @@ const AnimatedCursor = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [showHint, setShowHint] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | number | null>(null);
   const animationTimeoutsRef = useRef<Array<NodeJS.Timeout | number>>([]);
 
   useEffect(() => {
+    const checkIsMobile = () => {
+      const isMobileDevice =
+        window.innerWidth < 768 ||
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        );
+      setIsMobile(isMobileDevice);
+    };
+
+    checkIsMobile();
+    window.addEventListener("resize", checkIsMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkIsMobile);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Don't run animation on mobile
+    if (isMobile) return;
+
     const startAnimation = () => {
       const firstSkillTag = document.querySelector("[data-skill-tag]");
       if (!firstSkillTag) return;
@@ -72,9 +94,10 @@ const AnimatedCursor = () => {
       );
       animationTimeoutsRef.current = [];
     };
-  }, []);
+  }, [isMobile]);
 
-  if (!isVisible) return null;
+  // Don't render on mobile
+  if (isMobile || !isVisible) return null;
 
   return (
     <div className="fixed inset-0 pointer-events-none z-50">
@@ -110,7 +133,7 @@ const AnimatedCursor = () => {
       {/* Hint Tooltip */}
       {showHint && (
         <div
-          className="hidden md:block font-mono bg-white dark:bg-slate-900 text-neutral-700 dark:text-neutral-200 text-xs px-4 py-2 shadow-lg absolute rounded-lg font-medium"
+          className="bg-white dark:bg-slate-900 text-neutral-700 dark:text-neutral-200 text-xs px-4 py-2 shadow-lg absolute rounded-lg font-medium font-mono"
           style={{
             left: cursorPosition.x + 20,
             top: cursorPosition.y - 10,

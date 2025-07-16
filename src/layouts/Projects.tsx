@@ -24,16 +24,19 @@ const Projects = () => {
       className="px-4 py-12 sm:px-8 md:px-16 lg:px-32 lg:w-full mx-auto"
     >
       <Title>Projects</Title>
-      <div className="flex flex-col lg:flex-row w-full gap-8 justify-between items-start">
-        <div className="w-full lg:w-2/3">
-          <ProjectsGrid filters={filters} />
-        </div>
-        <div className="w-full lg:w-1/3">
+      <div className="flex flex-col lg:flex-row w-full gap-6 sm:gap-8 justify-between items-start">
+        <div className="w-full lg:w-1/3 lg:order-2">
           <Skills
             isFiltered={isFiltered}
             filter={toggleFilter}
             filtersLength={filters.length}
           />
+        </div>
+
+        <div className="w-full lg:w-2/3 lg:order-1 flex justify-center lg:justify-start">
+          <div className="w-full max-w-4xl mx-auto lg:mx-0">
+            <ProjectsGrid filters={filters} />
+          </div>
         </div>
       </div>
     </section>
