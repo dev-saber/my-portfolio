@@ -4,7 +4,7 @@ const skills: {
 }[] = [
   {
     category: "Programming Languages",
-    skills: ["Python", "Javascript/TypeScript", "Java", "PHP", "C++"],
+    skills: ["Python", "JavaScript/TypeScript", "Java", "PHP", "C++"],
   },
   {
     category: "Frontend Technologies",
@@ -72,12 +72,7 @@ const projects: {
     title: "Dental-Clinic-Management-System",
     description:
       "A Java desktop app for managing dental clinics, featuring patient records, appointments, invoices, and prescriptions. Built with Java Swing and JSON storage, it supports role-based access for doctors and assistants.",
-    tools: [
-      "Java",
-      "Java Swing",
-      "Jackson Library",
-      "IntelliJ IDEA",
-    ],
+    tools: ["Java", "Java Swing", "Jackson Library", "IntelliJ IDEA"],
     github: "https://github.com/dev-saber/Dental-Clinic-Management-System",
   },
   {
@@ -105,7 +100,13 @@ const projects: {
     title: "Deliverix",
     description:
       "A Django REST API for managing mail and package logistics with JWT auth, role-based permissions, and endpoints for offices, users, and delivery requests.",
-    tools: ["Python", "Django", "Django Rest Framework", "MySQL", "JSON Web Token"],
+    tools: [
+      "Python",
+      "Django",
+      "Django Rest Framework",
+      "MySQL",
+      "JSON Web Token",
+    ],
     github: "https://github.com/dev-saber/Deliverix",
   },
   {

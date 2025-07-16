@@ -14,10 +14,10 @@ const ProjectCard = ({
   return (
     <div className="project relative rounded-xl bg-[rgba(255,255,255,0.125)] w-full overflow-visible">
       <div className="project-glow absolute inset-0 rounded-xl z-0 pointer-events-none" />
-      <div className="project-content relative m-[2px] rounded-xl bg-white/80 dark:bg-slate-950 flex flex-col gap-4 p-6 z-10 min-h-[calc(100%-4px)]">
+      <div className="project-content relative m-[2px] rounded-xl bg-white/90 dark:bg-slate-950 flex flex-col gap-4 p-6 z-10 min-h-[calc(100%-4px)] shadow-md border-2 dark:border-none border-gray-100/80 dark:border-gray-800">
         <div className="flex-shrink-0">
           <div className="flex justify-between">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
               {title}
             </h3>
             {github ? (
@@ -33,7 +33,7 @@ const ProjectCard = ({
               </span>
             )}
           </div>
-          <p className="mt-2 text-gray-700 dark:text-gray-300">{description}</p>
+          <p className="mt-2 text-gray-600 dark:text-gray-300">{description}</p>
         </div>
 
         <div className="flex-1 flex flex-col justify-end">
@@ -41,7 +41,7 @@ const ProjectCard = ({
             {tools.map((tool, index) => (
               <span
                 key={index}
-                className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-green-50 dark:bg-green-900 text-green-700 dark:text-green-300"
+                className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-100/70 dark:bg-green-900 text-emerald-600 dark:text-green-300 border border-emerald-200/50 dark:border-green-800/50"
               >
                 {tool}
               </span>

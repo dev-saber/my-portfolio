@@ -24,7 +24,7 @@ const ExperienceTimeline: React.FC = () => {
                     {item.title}
                   </h3>
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-green-50 dark:bg-green-900 text-green-700 dark:text-green-300">
+                    <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-emerald-100/70 dark:bg-green-900 text-emerald-600 dark:text-green-300">
                       {item.period}
                     </span>
                     <span className="text-xs text-neutral-500 dark:text-neutral-400">
@@ -53,7 +53,7 @@ const ExperienceTimeline: React.FC = () => {
                   {item.technologies.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="px-2 py-1 bg-green-50 dark:bg-green-900 text-green-700 dark:text-green-300 text-xs font-medium rounded-full"
+                      className="px-2 py-1 bg-emerald-100/70 dark:bg-green-900 text-emerald-600 dark:text-green-300 text-xs font-medium rounded-full"
                     >
                       {tech}
                     </span>

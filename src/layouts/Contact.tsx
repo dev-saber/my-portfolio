@@ -23,7 +23,7 @@ const Contact = () => {
           Drop me a message{" "}
           <a
             href="mailto:sifeddine.edr@gmail.com"
-            className="text-green-700 dark:text-green-400 underline hover:opacity-80 transition"
+            className="text-emerald-600 dark:text-green-400 underline hover:opacity-80 transition"
           >
             here
           </a>{" "}

@@ -22,7 +22,7 @@ const ProjectsGrid = ({ filters }: { filters: string[] }) => {
   const excludedFilters =
     skills.find((skill) => skill.category === "Miscellaneous")?.skills || [];
   const enhancedFilters = filters
-    .map((filter) => (filter === "Javascript/TypeScript" ? "React" : filter))
+    .map((filter) => (filter === "JavaScript/TypeScript" ? "React" : filter))
     .filter((filter) => !excludedFilters.includes(filter));
 
   return (

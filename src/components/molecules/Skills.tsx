@@ -21,8 +21,10 @@ const Skills = ({
               <div
                 key={skillName}
                 data-skill-tag
-                className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold hover:bg-green-50 dark:hover:bg-green-900 text-green-700 dark:text-green-300 cursor-pointer transition-colors border border-green-700 dark:border-green-900 ${
-                  isFiltered(skillName) ? "bg-green-100 dark:bg-green-800" : ""
+                className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold hover:bg-emerald-100 dark:hover:bg-green-900 text-green-700 dark:text-green-300 cursor-pointer transition-colors border border-green-600 dark:border-green-900 ${
+                  isFiltered(skillName)
+                    ? "bg-emerald-200/70 dark:bg-green-800"
+                    : ""
                 }`}
                 onClick={() => filter(skillName)}
               >

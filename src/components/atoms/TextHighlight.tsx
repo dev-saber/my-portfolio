@@ -25,7 +25,8 @@ export default function TextHighlight({ word }: { word: string }) {
         "[background:linear-gradient(to_bottom,rgba(34,197,94,0.9),rgba(22,163,74,0.7),rgba(21,128,61,0.5))]",
         "shadow-[inset_0_-1px_rgba(22,163,74,0.6),inset_0_0_0_1px_rgba(34,197,94,0.4),_0_4px_8px_rgba(34,197,94,0.3)]",
         "dark:[background:linear-gradient(to_bottom,rgba(34,197,94,0.8),rgba(22,163,74,0.6),rgba(21,128,61,0.4))]",
-        "dark:shadow-[inset_0_-1px_rgba(21,128,61,0.7),inset_0_0_0_1px_rgba(34,197,94,0.3),_0_4px_8px_rgba(34,197,94,0.2)]"
+        "dark:shadow-[inset_0_-1px_rgba(21,128,61,0.7),inset_0_0_0_1px_rgba(34,197,94,0.3),_0_4px_8px_rgba(34,197,94,0.2)]",
+        "text-white"
       )}
       key={animationKey}
     >

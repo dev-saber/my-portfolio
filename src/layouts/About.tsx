@@ -13,7 +13,7 @@ const About = () => {
           <span className="font-semibold">Sifeddine Eddarai</span> — but you can
           call me{" "}
           <span
-            className="text-green-600 dark:text-green-400 font-bold text-lg md:text-xl cursor-pointer"
+            className="text-green-500 dark:text-green-400 font-bold text-lg md:text-xl cursor-pointer"
             onClick={() =>
               window.open(
                 "https://github.com/dev-saber",
@@ -37,7 +37,7 @@ const About = () => {
         </p>
         <p className="mb-4">
           Outside of{" "}
-          <span className="font-mono text-green-600 dark:text-green-400">
+          <span className="font-mono text-green-500 dark:text-green-400">
             {"<"}coding{"/>"}
           </span>
           , I’m someone who loves reading books, a football tactics enthusiast
@@ -52,7 +52,7 @@ const About = () => {
         <p className="mb-4">
           Lately, I’ve also been diving deep into the world of data. My passion
           started with football metrics — things like{" "}
-          <span className="relative group font-mono text-green-400 cursor-pointer">
+          <span className="relative group font-mono text-green-500 cursor-pointer">
             xG
             <span className="absolute left-1/2 top-full z-10 mt-2 w-68 -translate-x-1/2 rounded-lg bg-white dark:bg-slate-900 text-neutral-700 dark:text-neutral-200 text-xs px-4 py-2 shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300">
               Expected Goals (xG): Measures shot quality based on factors like
@@ -60,7 +60,7 @@ const About = () => {
             </span>
           </span>
           ,{" "}
-          <span className="relative group font-mono text-green-400 cursor-pointer">
+          <span className="relative group font-mono text-green-500 cursor-pointer">
             xGC
             <span className="absolute left-1/2 top-full z-10 mt-2 w-68 -translate-x-1/2 rounded-lg bg-white dark:bg-slate-900 text-neutral-700 dark:text-neutral-200 text-xs px-4 py-2 shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300">
               Expected Goals Conceded (xGC): Estimates goals likely conceded
@@ -77,7 +77,7 @@ const About = () => {
           sparks your interest or you just want to say hi, feel free to{" "}
           <a
             href="mailto:sifeddine.edr@gmail.com"
-            className="text-green-700 dark:text-green-400 underline hover:opacity-80 transition"
+            className="text-green-500 dark:text-green-400 underline hover:opacity-80 transition"
           >
             drop me an email
           </a>{" "}
