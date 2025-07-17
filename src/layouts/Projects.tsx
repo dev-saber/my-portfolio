@@ -24,6 +24,23 @@ const Projects = () => {
       className="px-4 py-12 sm:px-8 md:px-16 lg:px-32 lg:w-full mx-auto"
     >
       <Title>Projects</Title>
+      <div className="text-center sm:text-lg m-4">
+        Here are a few of my projects, you can explore them all from{" "}
+        <span
+          className="text-green-500 dark:text-green-400 font-semibold cursor-pointer"
+          onClick={() =>
+            window.open(
+              "https://github.com/dev-saber?tab=repositories",
+              "_blank",
+              "noopener,noreferrer"
+            )
+          }
+        >
+          here
+        </span>
+        .
+      </div>
+
       <div className="flex flex-col lg:flex-row w-full gap-6 sm:gap-8 justify-between items-start">
         <div className="w-full lg:w-1/3 lg:order-2">
           <Skills
