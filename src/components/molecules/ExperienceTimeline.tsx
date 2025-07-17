@@ -39,8 +39,8 @@ const ExperienceTimeline: React.FC = () => {
                 <div className="space-y-2 mb-4">
                   {item.responsibilities.map((responsibility, idx) => (
                     <div key={idx} className="flex items-start gap-2">
-                      <span className="text-neutral-400 dark:text-neutral-500 mt-1.5 text-xs sm:text-sm">
-                        -
+                      <span className="text-green-400 dark:text-green-300 text-xs sm:text-sm flex items-center">
+                        •
                       </span>
                       <p className="text-neutral-700 dark:text-neutral-300 text-xs sm:text-sm leading-relaxed">
                         {responsibility}
