@@ -6,6 +6,7 @@ import Resume from "./layouts/Resume";
 import Projects from "./layouts/Projects";
 import Contact from "./layouts/Contact";
 import Footer from "./layouts/Footer";
+import Socials from "./components/atoms/Socials";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+      <Socials />
     </ThemeProvider>
   );
 }
