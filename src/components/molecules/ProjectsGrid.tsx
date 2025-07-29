@@ -19,19 +19,9 @@ const ProjectsGrid = ({ filters }: { filters: string[] }) => {
     });
   };
 
-  const excludedFilters = [
-    "Git",
-    "GitHub",
-    "Visual Studio Code",
-    "IntelliJ IDEA",
-    "Axios",
-    "Insomnia",
-    "Postman",
-  ];
-
-  const enhancedFilters = filters
-    .map((filter) => (filter === "JavaScript/TypeScript" ? "React" : filter))
-    .filter((filter) => !excludedFilters.includes(filter));
+  const enhancedFilters = filters.map((filter) =>
+    filter === "JavaScript/TypeScript" ? "React" : filter
+  );
 
   return (
     <div className="w-full">
