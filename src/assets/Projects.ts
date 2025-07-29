@@ -60,7 +60,7 @@ const projects: {
     title: "RADEES Identity Server",
     description:
       "A centralized identity management system built with Symfony and Keycloak OAuth2, enabling administrators to create and manage client applications, assign users with role-based permissions, and oversee authentication across multiple apps.",
-    tools: ["Tailwind", "PHP", "Symfony", "Keycloak", "Docker"],
+    tools: ["Tailwind", "JavaScript", "PHP", "Symfony", "Keycloak", "Docker"],
   },
   {
     title: "EMSI Connect",

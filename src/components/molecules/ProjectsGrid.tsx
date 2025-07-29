@@ -19,9 +19,8 @@ const ProjectsGrid = ({ filters }: { filters: string[] }) => {
     });
   };
 
-  const enhancedFilters = filters.map((filter) =>
-    filter === "JavaScript/TypeScript" ? "React" : filter
-  );
+  const isJsTsFilter = filters.includes("JavaScript/TypeScript");
+  const otherFilters = filters.filter((f) => f !== "JavaScript/TypeScript");
 
   return (
     <div className="w-full">
@@ -31,11 +30,26 @@ const ProjectsGrid = ({ filters }: { filters: string[] }) => {
         onPointerMove={handlePointerMove}
       >
         {projects
-          .filter(
-            (project) =>
-              enhancedFilters.length === 0 ||
-              enhancedFilters.every((filter) => project.tools.includes(filter))
-          )
+          .filter((project) => {
+            if (filters.length === 0) return true;
+
+            const JsTsFilter =
+              isJsTsFilter &&
+              (project.tools.includes("React") ||
+                project.tools.includes("JavaScript"));
+
+            const normalFilter =
+              otherFilters.length === 0 ||
+              otherFilters.every((filter) => project.tools.includes(filter));
+
+            if (isJsTsFilter && otherFilters.length > 0) {
+              return JsTsFilter && normalFilter;
+            } else if (isJsTsFilter) {
+              return JsTsFilter;
+            } else {
+              return normalFilter;
+            }
+          })
           .map((project, index) => (
             <ProjectCard
               key={index}
