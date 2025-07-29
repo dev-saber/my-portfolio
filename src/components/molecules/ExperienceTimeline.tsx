@@ -3,7 +3,7 @@ import experiences from "@/assets/experience";
 
 const ExperienceTimeline: React.FC = () => {
   return (
-    <div className="w-full max-w-2xl p-0 sm:p-6">
+    <div className="w-full p-0 sm:p-6">
       <div className="relative">
         <div className="absolute right-5 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-slate-700"></div>
 

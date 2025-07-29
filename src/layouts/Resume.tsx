@@ -33,7 +33,7 @@ const Resume = () => {
             </h2>
           </div>
           <div className="flex justify-end">
-            <div className="w-full max-w-2xl">
+            <div className="w-full max-w-3xl">
               <ExperienceTimeline />
             </div>
           </div>
