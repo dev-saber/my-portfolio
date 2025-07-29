@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import ProjectCard from "../atoms/ProjectCard";
-import { projects, skills } from "@/assets/Projects";
+import { projects } from "@/assets/Projects";
 
 const ProjectsGrid = ({ filters }: { filters: string[] }) => {
   const gridRef = useRef<HTMLDivElement>(null);
@@ -19,8 +19,16 @@ const ProjectsGrid = ({ filters }: { filters: string[] }) => {
     });
   };
 
-  const excludedFilters =
-    skills.find((skill) => skill.category === "Miscellaneous")?.skills || [];
+  const excludedFilters = [
+    "Git",
+    "GitHub",
+    "Visual Studio Code",
+    "IntelliJ IDEA",
+    "Axios",
+    "Insomnia",
+    "Postman",
+  ];
+
   const enhancedFilters = filters
     .map((filter) => (filter === "JavaScript/TypeScript" ? "React" : filter))
     .filter((filter) => !excludedFilters.includes(filter));

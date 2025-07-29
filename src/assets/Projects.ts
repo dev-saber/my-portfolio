@@ -12,7 +12,14 @@ const skills: {
   },
   {
     category: "Backend Technologies",
-    skills: ["Laravel", "Django", "Django Rest Framework", "Flask", "ASP .NET"],
+    skills: [
+      "Django",
+      "Django Rest Framework",
+      "Flask",
+      "ASP .NET",
+      "Laravel",
+      "Symfony",
+    ],
   },
   {
     category: "Database Management",
@@ -22,10 +29,14 @@ const skills: {
     category: "Web Scraping",
     skills: ["Selenium"],
   },
-  //   {
-  //     category: "DevOps",
-  //     skills: ["Docker", "GitHub Actions", "CI/CD"],
-  //   },
+  {
+    category: "DevOps",
+    skills: ["Docker"],
+  },
+  {
+    category: "Operating Systems",
+    skills: ["Linux"],
+  },
   {
     category: "Miscellaneous",
     skills: [
@@ -35,6 +46,7 @@ const skills: {
       "Visual Studio Code",
       "IntelliJ IDEA",
       "JSON Web Token",
+      "Keycloak",
       "Chart JS",
       "Axios",
       "Insomnia",
@@ -51,6 +63,12 @@ const projects: {
   tools: string[];
   github?: string;
 }[] = [
+  {
+    title: "RADEES Identity Server",
+    description:
+      "A centralized identity management system built with Symfony and Keycloak OAuth2, enabling administrators to create and manage client applications, assign users with role-based permissions, and oversee authentication across multiple apps.",
+    tools: ["Tailwind", "PHP", "Symfony", "Keycloak", "Docker"],
+  },
   {
     title: "EMSI Connect",
     description:
