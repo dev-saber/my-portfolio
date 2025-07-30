@@ -42,7 +42,7 @@ const Projects = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row w-full gap-6 sm:gap-8 justify-between items-start">
-        <div className="w-full lg:w-1/3 lg:order-2">
+        <div className="w-full lg:w-1/4 lg:order-2">
           <Skills
             isFiltered={isFiltered}
             filter={toggleFilter}
@@ -50,8 +50,8 @@ const Projects = () => {
           />
         </div>
 
-        <div className="w-full lg:w-2/3 lg:order-1 flex justify-center lg:justify-start">
-          <div className="w-full max-w-4xl mx-auto lg:mx-0">
+        <div className="w-full lg:w-3/4 lg:order-1 flex justify-center lg:justify-start">
+          <div className="w-full max-w-5xl mx-auto lg:mx-0">
             <ProjectsGrid filters={filters} />
           </div>
         </div>

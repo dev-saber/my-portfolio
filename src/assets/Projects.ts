@@ -59,13 +59,13 @@ const projects: {
   {
     title: "RADEES Identity Server",
     description:
-      "A centralized identity management system built with Symfony and Keycloak OAuth2, enabling administrators to create and manage client applications, assign users with role-based permissions, and oversee authentication across multiple apps.",
+      "A centralized identity management system built with Symfony and Keycloak OAuth2, enabling users and role-based permissions management, and authentication across multiple apps.",
     tools: ["Tailwind", "JavaScript", "PHP", "Symfony", "Keycloak", "Docker"],
   },
   {
     title: "EMSI Connect",
     description:
-      "A professional networking and recruitment platform dedicated for EMSI alumni. Enables CV creation, job applications, real-time messaging, and social interaction — all built with Laravel, React, and WebSockets.",
+      "A professional networking and recruitment platform dedicated for EMSI alumnus. Enables CV creation, job applications, and social interaction.",
     tools: [
       "React",
       "Tailwind",
@@ -82,20 +82,20 @@ const projects: {
   {
     title: "Dental-Clinic-Management-System",
     description:
-      "A Java desktop app for managing dental clinics, featuring patient records, appointments, invoices, and prescriptions. Built with Java Swing and JSON storage, it supports role-based access for doctors and assistants.",
+      "A Java desktop app for managing dental clinics, featuring patient records, appointments, invoices, and prescriptions.",
     tools: ["Java", "Java Swing", "Jackson Library", "IntelliJ IDEA"],
     github: "https://github.com/dev-saber/Dental-Clinic-Management-System",
   },
   {
     title: "TheAthletic Articles Scraper",
     description:
-      "A terminal-driven Python scraper that fetches articles from The Athletic and integrates them into a Notion database using Selenium and the Notion API. Supports daily sync and single-URL scraping.",
+      "A daily terminal-based Python scraper using Selenium and the Notion API to sync TheAthletic articles.",
     tools: ["Python", "Selenium", "Notion API", "Requests"],
   },
   {
     title: "Sakan",
     description:
-      "A real estate rental platform built with React.js and ASP .NET, featuring role-based authentication, user/admin access control, and efficient property and post management.",
+      "A real estate rental platform built with React.js and ASP .NET.",
     tools: [
       "React",
       "Tailwind",
@@ -109,8 +109,7 @@ const projects: {
   },
   {
     title: "Deliverix",
-    description:
-      "A Django REST API for managing mail and package logistics with JWT auth, role-based permissions, and endpoints for offices, users, and delivery requests.",
+    description: "A Django REST API for managing mail and package logistics.",
     tools: [
       "Python",
       "Django",
@@ -123,7 +122,7 @@ const projects: {
   {
     title: "University Library Management",
     description:
-      "A library management system with secure user authentication and efficient handling of book borrow and returns. Built using Django REST Framework and React, designed for streamlined and scalable library operations.",
+      "A library management system dedicated to book borrow and returns handle, built using Django REST Framework and React.",
     tools: [
       "React",
       "Tailwind",
@@ -139,21 +138,21 @@ const projects: {
   {
     title: "EduManage",
     description:
-      "A command-line C++ application for managing school operations such as student and staff profiles, course registration, grading, attendance, and timetabling.",
+      "A command-line C++ application for managing school operations (student and staff profiles, course registration, grading, attendance, and timetabling).",
     tools: ["C++"],
     github: "https://github.com/dev-saber/EduManage",
   },
   {
     title: "Moroccan Blood Donating Centers API",
     description:
-      "A Flask-based API that offers information about blood donating centers in Morocco.",
+      "A Flask-based API offering blood donating centers information in Morocco.",
     tools: ["Python", "Flask", "MongoDB"],
     github: "https://github.com/dev-saber/moroccan-blood-donating-centers-api",
   },
   {
     title: "EMSI Grades Checker",
     description:
-      "A Python automation tool to log in and scrape academic grades from the EMSI student portal. It handles authentication, term navigation, and grade extraction.",
+      "A Python automated script that scrapes academic grades from the EMSI student portal.",
     tools: ["Python", "Selenium"],
     github: "https://github.com/dev-saber/emsi-grades-checker",
   },

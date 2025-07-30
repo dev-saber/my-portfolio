@@ -3,7 +3,7 @@ import socials from "@/assets/socials";
 const Socials = () => {
   return (
     <>
-      <div className="fixed top-1/2 right-15 -translate-y-1/2 z-50">
+      <div className="fixed top-1/2 right-8 lg:right-4 -translate-y-1/2 z-50">
         <ul
           className="flex flex-col gap-y-4 w-fit
       fixed top-1/2 -translate-y-1/2 z-50
