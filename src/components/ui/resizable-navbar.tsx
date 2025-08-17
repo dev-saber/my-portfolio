@@ -9,7 +9,6 @@ import {
 } from "motion/react";
 
 import React, { useRef, useState } from "react";
-import logo from "../../assets/react.svg";
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -241,5 +240,18 @@ export const MobileNavToggle = ({
 };
 
 export const NavbarLogo = () => {
-  return <img src={logo} alt="logo" width={30} height={30} />;
+  return (
+    <div className="flex-shrink-0 h-10 w-14 flex items-center justify-center">
+      <img 
+        src="/dark_logo.svg" 
+        alt="logo" 
+        className="dark:hidden object-contain" 
+      />
+      <img 
+        src="/light_logo.svg" 
+        alt="logo" 
+        className="hidden dark:block object-contain" 
+      />
+    </div>
+  );
 };

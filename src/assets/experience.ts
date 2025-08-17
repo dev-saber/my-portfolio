@@ -18,7 +18,7 @@ const experiences: {
       "Studied the infeasibility of migrating the project to the latest Laravel version due to Keycloak package incompatibility.",
       "Designed the architecture of a Keycloak realm and clients to manage users, roles, and permissions.",
       "Built the project from scratch using Symfony, Twig, Tailwind, and JavaScript.",
-      "Implemented Docker for deployment.",
+      "Dockerized the project.",
     ],
     technologies: [
       "PHP",
