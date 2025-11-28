@@ -13,6 +13,7 @@ const skills: {
   {
     category: "Backend Technologies",
     skills: [
+      "Spring Boot",
       "Django",
       "Django Rest Framework",
       "Flask",
