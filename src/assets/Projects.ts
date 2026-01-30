@@ -4,7 +4,7 @@ const skills: {
 }[] = [
   {
     category: "Programming Languages",
-    skills: ["Python", "JavaScript/TypeScript", "Java", "PHP", "C++"],
+    skills: ["Java", "Python", "JavaScript/TypeScript", "PHP", "C++"],
   },
   {
     category: "Frontend Technologies",
@@ -17,9 +17,9 @@ const skills: {
       "Django",
       "Django Rest Framework",
       "Flask",
-      "ASP .NET",
       "Laravel",
       "Symfony",
+      "FastAPI",
     ],
   },
   {
@@ -32,11 +32,7 @@ const skills: {
   },
   {
     category: "DevOps",
-    skills: ["Docker"],
-  },
-  {
-    category: "Operating Systems",
-    skills: ["Linux"],
+    skills: ["Docker", "Git"],
   },
   {
     category: "Miscellaneous",
@@ -44,6 +40,7 @@ const skills: {
       "Vite",
       "JSON Web Token",
       "Keycloak",
+      "GraphQL",
       "Chart JS",
       "Notion API",
       "Stripe API",
@@ -57,6 +54,22 @@ const projects: {
   tools: string[];
   github?: string;
 }[] = [
+  {
+    title: "Spring Billing Manager",
+    description:
+      "Billing and invoicing management platform using Spring Boot, GraphQL, MongoDB, and React.",
+    tools: [
+      "React",
+      "Tailwind",
+      "Vite",
+      "JavaScript",
+      "Java",
+      "Spring Boot",
+      "GraphQL",
+      "MongoDB",
+    ],
+    github: "https://github.com/dev-saber/spring-billing-manager",
+  },
   {
     title: "RADEES Identity Server",
     description:
@@ -76,9 +89,7 @@ const projects: {
       "Laravel",
       "Sanctum",
       "MySQL",
-      // "Docker", "WebSockets"
     ],
-    // github: "",
   },
   {
     title: "Dental-Clinic-Management-System",
@@ -92,21 +103,6 @@ const projects: {
     description:
       "A daily terminal-based Python scraper using Selenium and the Notion API to sync TheAthletic articles.",
     tools: ["Python", "Selenium", "Notion API", "Requests"],
-  },
-  {
-    title: "Sakan",
-    description:
-      "A real estate rental platform built with React.js and ASP .NET.",
-    tools: [
-      "React",
-      "Tailwind",
-      "Redux Toolkit",
-      "Vite",
-      "ASP .NET",
-      "JSON Web Token",
-      "MS SQL Server",
-    ],
-    github: "",
   },
   {
     title: "Deliverix",
@@ -149,13 +145,6 @@ const projects: {
       "A Flask-based API offering blood donating centers information in Morocco.",
     tools: ["Python", "Flask", "MongoDB"],
     github: "https://github.com/dev-saber/moroccan-blood-donating-centers-api",
-  },
-  {
-    title: "EMSI Grades Checker",
-    description:
-      "A Python automated script that scrapes academic grades from the EMSI student portal.",
-    tools: ["Python", "Selenium"],
-    github: "https://github.com/dev-saber/emsi-grades-checker",
   },
 ];
 
