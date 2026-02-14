@@ -28,11 +28,15 @@ const skills: {
   },
   {
     category: "Web Scraping",
-    skills: ["Selenium"],
+    skills: ["Selenium", "Playwright"],
   },
   {
     category: "DevOps",
     skills: ["Docker", "Git"],
+  },
+  {
+    category: "Data Manipulation",
+    skills: ["Pandas", "Jupyter Notebook"],
   },
   {
     category: "Miscellaneous",
@@ -44,6 +48,7 @@ const skills: {
       "Chart JS",
       "Notion API",
       "Stripe API",
+      "IntelliJ IDEA"
     ],
   },
 ];
@@ -99,10 +104,16 @@ const projects: {
     github: "https://github.com/dev-saber/Dental-Clinic-Management-System",
   },
   {
+    title: "Sarouty.ma Scraper",
+    description:
+      "A Python scraper that collects real estate data based on filters, cleans and enriches data then exports it fr data analytics purposes.",
+    tools: ["Python", "Pandas", "FastAPI", "Jupyter Notebook", "Docker"],
+  },
+  {
     title: "TheAthletic Articles Scraper",
     description:
       "A daily terminal-based Python scraper using Selenium and the Notion API to sync TheAthletic articles.",
-    tools: ["Python", "Selenium", "Notion API", "Requests"],
+    tools: ["Python", "Selenium", "Notion API"],
   },
   {
     title: "Deliverix",
