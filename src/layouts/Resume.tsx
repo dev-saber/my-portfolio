@@ -19,7 +19,7 @@ const Resume = () => {
             </h2>
           </div>
           <div className="flex">
-            <div className="w-full max-w-2xl">
+            <div className="w-full">
               <EducationTimeline />
             </div>
           </div>

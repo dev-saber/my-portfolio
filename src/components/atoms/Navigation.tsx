@@ -16,7 +16,7 @@ export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="w-full p-2 flex items-center sticky top-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md">
+    <div className="w-full p-2 flex items-center fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md">
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody>

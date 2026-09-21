@@ -1,4 +1,4 @@
-import { skills } from "@/assets/Projects";
+import { skills } from "@/assets/Activity";
 import AnimatedCursor from "../atoms/AnimatedCursor";
 
 const Skills = ({

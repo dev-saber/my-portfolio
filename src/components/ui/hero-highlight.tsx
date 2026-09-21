@@ -11,7 +11,7 @@ export const HeroHighlight = ({
   return (
     <div
       className={cn(
-        "group flex h-[25rem] lg:h-[40rem] w-full items-center justify-center"
+        "group flex h-full w-full items-center justify-center"
       )}
     >
       {children}

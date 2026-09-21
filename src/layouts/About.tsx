@@ -54,7 +54,7 @@ const About = () => {
           started with football metrics — things like{" "}
           <span className="relative group font-mono text-green-500 cursor-pointer">
             xG
-            <span className="absolute left-1/2 top-full z-10 mt-2 w-68 -translate-x-1/2 rounded-lg bg-white dark:bg-slate-900 text-neutral-700 dark:text-neutral-200 text-xs px-4 py-2 shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300">
+            <span className="absolute left-1/2 top-full z-10 mt-2 w-68 max-w-[85vw] -translate-x-1/2 rounded-lg bg-white dark:bg-slate-900 text-neutral-700 dark:text-neutral-200 text-xs px-4 py-2 shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300">
               Expected Goals (xG): Measures shot quality based on factors like
               assist type, angle, and distance.
             </span>
@@ -62,7 +62,7 @@ const About = () => {
           ,{" "}
           <span className="relative group font-mono text-green-500 cursor-pointer">
             xGC
-            <span className="absolute left-1/2 top-full z-10 mt-2 w-68 -translate-x-1/2 rounded-lg bg-white dark:bg-slate-900 text-neutral-700 dark:text-neutral-200 text-xs px-4 py-2 shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300">
+            <span className="absolute left-1/2 top-full z-10 mt-2 w-68 max-w-[85vw] -translate-x-1/2 rounded-lg bg-white dark:bg-slate-900 text-neutral-700 dark:text-neutral-200 text-xs px-4 py-2 shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300">
               Expected Goals Conceded (xGC): Estimates goals likely conceded
               from the quality of shots faced.
             </span>

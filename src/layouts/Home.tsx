@@ -1,10 +1,11 @@
 import { motion } from "motion/react";
+import { ChevronDown } from "lucide-react";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
 import TextHighlight from "@/components/atoms/TextHighlight";
 
 export default function Home() {
   return (
-    <section id="home">
+    <section id="home" className="h-screen relative">
       <HeroHighlight>
         <motion.h1
           initial={{
@@ -28,6 +29,19 @@ export default function Home() {
           <TextHighlight word="World of Data" /> .
         </motion.h1>
       </HeroHighlight>
+
+      <button
+        type="button"
+        onClick={() =>
+          document
+            .getElementById("about")
+            ?.scrollIntoView({ behavior: "smooth" })
+        }
+        aria-label="Scroll to About section"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer text-neutral-400 dark:text-neutral-500 hover:text-emerald-500 dark:hover:text-green-400 transition-colors"
+      >
+        <ChevronDown className="w-8 h-8" />
+      </button>
     </section>
   );
 }

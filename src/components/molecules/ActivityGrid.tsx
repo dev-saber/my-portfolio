@@ -1,9 +1,25 @@
-import React, { useRef } from "react";
+import React, { useMemo, useRef } from "react";
 import ProjectCard from "../atoms/ProjectCard";
-import { projects } from "@/assets/Projects";
+import { projects } from "@/assets/Activity";
 
-const ProjectsGrid = ({ filters }: { filters: string[] }) => {
+const DEFAULT_PROJECT_COUNT = 9;
+
+function shuffle<T>(items: T[]): T[] {
+  const result = [...items];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
+const ActivityGrid = ({ filters }: { filters: string[] }) => {
   const gridRef = useRef<HTMLDivElement>(null);
+
+  const randomProjects = useMemo(
+    () => shuffle(projects).slice(0, DEFAULT_PROJECT_COUNT),
+    []
+  );
 
   const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
     if (!gridRef.current) return;
@@ -29,7 +45,7 @@ const ProjectsGrid = ({ filters }: { filters: string[] }) => {
         className="grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-12"
         onPointerMove={handlePointerMove}
       >
-        {projects
+        {(filters.length === 0 ? randomProjects : projects)
           .filter((project) => {
             if (filters.length === 0) return true;
 
@@ -64,4 +80,4 @@ const ProjectsGrid = ({ filters }: { filters: string[] }) => {
   );
 };
 
-export default ProjectsGrid;
+export default ActivityGrid;
