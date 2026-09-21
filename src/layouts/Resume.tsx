@@ -32,8 +32,8 @@ const Resume = () => {
               Experience
             </h2>
           </div>
-          <div className="flex justify-end">
-            <div className="w-full max-w-3xl">
+          <div className="flex justify-center">
+            <div className="w-full">
               <ExperienceTimeline />
             </div>
           </div>

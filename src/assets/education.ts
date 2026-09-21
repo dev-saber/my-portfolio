@@ -4,7 +4,7 @@ const educations: {
   degree: string;
 }[] = [
   {
-    period: "Oct 2023 - Present",
+    period: "Oct 2023 - Sep 2026",
     institute: "Ecole Marocaine Des Sciences De L'ingénieur",
     degree: "Computer Science Engineering",
   },
